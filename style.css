@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap'); 
+
+html, div
+{
+    font-family: 'Courier New', Courier, monospace;
+    color: papayawhip;
+}
+
+body
+{
+    margin: 20px;
+    background:#141414;
+}
+
+
+.center
+{
+    text-align: center;
+}
+
+.column
+{
+    float: left;
+    width: 20%;
+    padding: 15px;
+    background-color: darkslategray;
+    border: black;
+
+}
+
+nav a
+{
+    float: left;
+    width: 50%;
+    display: block;
+    padding: 0 0 10px, 10px;
+    font-size: 16px;
+    color: palegoldenrod;
+    text-align: center;
+
+    
+}
+
+
+
+
+h1, h2, p
+{
+    font-size: 24px;
+    font-family: Heebo, sans-serif;
+
+}
+
