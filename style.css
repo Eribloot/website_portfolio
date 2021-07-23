@@ -6,12 +6,17 @@ html, div
     color: papayawhip;
 }
 
-body
-{
-    margin: 20px;
-    background:#141414;
-}
 
+.background
+{
+    background-image: url(./images/back.png);
+    background-position: center;
+    background-color: black;
+    padding-top: 10px;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+
+}
 
 .center
 {
@@ -36,7 +41,6 @@ nav a
     padding: 0 0 10px, 10px;
     font-size: 16px;
     color: palegoldenrod;
-    text-align: center;
 
     
 }
