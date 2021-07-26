@@ -204,7 +204,7 @@ li a:hover
 }
 
 /*This class creates the arrow icons that follow bulleted lists in section. It uses the before pseudo-operator to creat them before the text that follows them.*/
- ul li::before
+article > section > ul > li::before
 {
     position: relative;
     content: "";
@@ -221,8 +221,11 @@ ul li:hover, ol li:hover
 {
     color:rgb(0, 148, 79);
 }
-
-ul li:hover::before, ol li:hover::before
+ol li:hover::before
+{
+    color: rgb(255, 145, 145);
+}
+ul li:hover::before 
 {
     border-color: rgb(255, 145, 145);
 }
