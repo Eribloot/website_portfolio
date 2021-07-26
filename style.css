@@ -1,56 +1,220 @@
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap');
 
-html, div
+/* The general containers: body, header, and footer, are formatted bellow. 
+Body sets the background, and it's position. 
+header sets the header boundaries for the main heading.
+footer sets the footer at the bottom of the page, making it a block, and sticky.*/
+
+
+body
 {
-    font-family: 'Courier New', Courier, monospace;
-    color: papayawhip;
-}
 
-
-.background
-{
-    background-image: url(./images/back.png);
+    background-image: url("images/stardust.png");
     background-position: center;
     background-color: black;
-    padding-top: 10px;
     background-attachment: scroll;
-    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+header
+{
+    position: relative;
+    top: 0;
+}
+
+footer
+{    
+    padding-top: 10px;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    display: block;
+    background-color: rgb(1, 31, 31);
+    border-style: hidden;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
 
 }
 
+/* each of the headers- 1, 2, and 3- are slight deviations from the default set in p.
+p is the standard formatting for the text, as well as lists.  */
+h1
+{
+    font-size: 46px;
+    font-family:Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    color:rgb(255, 111, 86)
+}
+h2
+{    
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    color: rgb(255, 120, 96);
+}
+h3
+{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 26px;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", sans-serif;
+    color:rgb(255, 152, 133);
+}
+
+p, ul
+{
+    margin: 10px 100px;
+    font-size: 20px;
+    font-family: "Heebo", sans-serif;
+    color: rgb(255, 145, 145);
+}
+/*li is set to not have any styling, because a custom image is used to represent bullet points. */
+li
+{
+    list-style-type: none;
+}
+
+/* The image styling for the image of me.*/
+main img
+{
+    border: 1px groove;
+    border-color:seagreen;
+    border-radius: 10%;
+    margin: 50px 50px;
+}
+/*The styling for the horizontal bar splitting sections.*/
+hr
+{
+    margin: auto 100px;
+    border: 3px solid rgb(1, 31, 31);
+    border-radius: 10px;
+}
+
+
+/*Custom classes that are used for styling on different containers;
+two for text alignment, and one for if the user is hovering on the nav bar.*/
 .center
 {
     text-align: center;
 }
 
-.column
+.left
 {
-    float: left;
-    width: 20%;
-    padding: 15px;
-    background-color: darkslategray;
-    border: black;
+    text-align: left;
+}
+
+.active
+{
+    background-color:rgb(73, 226, 139);
+}
+/*The following classes are customizing all the links that aren't in the nav bar.
+each modifier is for the different states of the links.*/
+p a
+{
+    text-decoration: none;
+    color: rgb(224, 255, 255);
 
 }
 
-nav a
+p a:visited
+{
+    color:rgb(94, 255, 255)
+}
+
+p a:hover
+{
+    color:rgb(198, 252, 182)
+}
+
+p a:active
+{
+    color:rgb(231, 255, 143)
+}
+/*The following are the spacing for the two type of images:
+The footer image sizes are set, and spaced. They also react when the mouse hovers over them.
+The images that are used in main are spaced. */
+footer img
+{
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    padding: 0;
+}
+
+footer img:hover
+{
+    filter: invert(10);
+}
+
+main img
+{
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+/*The following nav and li related classes set the nav bar.
+nav ul sets the block and color displayed across the website, and sets it's boundaries. It's also set to not move with the page.
+nav li sets the separators between the linked blocks.
+li a sets the color and styling of the nav links.
+li a:hover sets the colors of the nav links when the mouse hovers over them.*/
+ nav ul
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(1, 31, 31);
+    position: absolute;
+    top: 50px;
+    width: 100%;
+}
+
+ nav li
 {
     float: left;
-    width: 50%;
+    border-right: 2px solid;
+    border-color: rgb(0, 0, 0);
+}
+
+li a
+{
     display: block;
-    padding: 0 0 10px, 10px;
-    font-size: 16px;
-    color: palegoldenrod;
+    color:rgb(224, 255, 255);
+    text-align: center;
+    padding: 3px 16px;
+    text-decoration: none;
 
-    
 }
 
-
-
-h1, h2, p
+li a:hover
 {
-    font-size: 24px;
-    font-family: Heebo, sans-serif;
-
+    background-color:rgb(51, 81, 81);
+    color:rgb(73, 226, 139);
 }
+
+/*This class creates the arrow icons that follow bulleted lists in section. It uses the before pseudo-operator to creat them before the text that follows them.*/
+ section li::before
+{
+    position: relative;
+    content: "";
+    display: inline-block;
+    width: 0.4em;
+    height: 0.4em;
+    border-right: 0.15em solid rgb(0, 148, 79);
+    border-top: 0.15em solid rgb(0, 148, 79);
+    transform:rotate(45deg);
+    margin-right: 15px;
+}
+/*These two classes change the color of the bulleted items when the mouse hovers over them.*/
+ section li:hover
+{
+    color:rgb(0, 148, 79);
+}
+
+ section li:hover::before
+{
+    border-color: rgb(255, 145, 145);
+}
+
+
+
 
