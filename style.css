@@ -61,17 +61,29 @@ h3
     color:rgb(255, 152, 133);
 }
 
-p, ul
+p, ul, ol
 {
     margin: 10px 100px;
     font-size: 20px;
     font-family: "Heebo", sans-serif;
     color: rgb(255, 145, 145);
 }
-/*li is set to not have any styling, because a custom image is used to represent bullet points. */
-li
+/*li is set to not have any styling for ul because a custom image is used to represent bullet points. ol li is set to have roman numerical listing.*/
+ul li
 {
     list-style-type: none;
+}
+ol li
+{
+    counter-increment: langs;
+}
+ol li::before
+{
+    content: counters(langs, ".") ". ";
+    color:rgb(73, 226, 139);
+    font-weight: bold;
+    font-family: cursive;
+
 }
 
 /* The image styling for the image of me.*/
@@ -192,7 +204,7 @@ li a:hover
 }
 
 /*This class creates the arrow icons that follow bulleted lists in section. It uses the before pseudo-operator to creat them before the text that follows them.*/
- section li::before
+ ul li::before
 {
     position: relative;
     content: "";
@@ -205,16 +217,12 @@ li a:hover
     margin-right: 15px;
 }
 /*These two classes change the color of the bulleted items when the mouse hovers over them.*/
- section li:hover
+ul li:hover, ol li:hover
 {
     color:rgb(0, 148, 79);
 }
 
- section li:hover::before
+ul li:hover::before, ol li:hover::before
 {
     border-color: rgb(255, 145, 145);
 }
-
-
-
-
