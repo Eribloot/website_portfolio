@@ -90,7 +90,7 @@ ol li::before
 /* The image styling for the image of me.*/
 main img
 {
-    border: 1px groove;
+    border: 1px ;
     border-color:seagreen;
     border-radius: 10%;
     margin: 50px 50px;
